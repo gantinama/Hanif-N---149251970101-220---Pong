@@ -20,7 +20,7 @@
 [Aa]ssets/Plugins/Editor/JetBrains*
 
 # Visual Studio cache directory
-.vs/
+.vs/*
 
 # Gradle cache directory
 .gradle/
@@ -58,3 +58,8 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+Ping Pong/Library/*
+Ping Pong/Temp/*
+Ping Pong/Logs/*
+obj/*
+.vsconfig
