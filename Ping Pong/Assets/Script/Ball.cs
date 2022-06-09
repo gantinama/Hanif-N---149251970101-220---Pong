@@ -6,6 +6,7 @@ public class Ball : MonoBehaviour
 {
     //manggil kelas vector2
     public Vector2 speed;
+    public Vector2 resetPosition;
 
     //memanggil rigid body
     private Rigidbody2D rig;
@@ -20,6 +21,11 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(speed * Time.deltaTime);
+        // Debug.Log("BALL: " + speed);
+    }
+
+    public void ResetBall()
+    {
+        transform.position = resetPosition;
     }
 }
