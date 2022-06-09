@@ -1314,7 +1314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b00ce83164e042b41b86b222706bd1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 10, y: 5.37}
+  speed: {x: 10.07, y: 5.07}
   resetPosition: {x: 0, y: 0}
 --- !u!212 &1777553247
 SpriteRenderer:
