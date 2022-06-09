@@ -10,8 +10,15 @@ public class MainMenuController : MonoBehaviour
         SceneManager.LoadScene("Game");
         Debug.Log("Created By Hanif Naufalianto-149251970101-220");
     }
+
     public void GetAuthor()
     {
         Debug.Log("Created By Hanif Naufalianto-149251970101-220");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+        Debug.Log("Keluar");
     }
 }
