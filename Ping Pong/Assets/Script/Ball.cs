@@ -28,4 +28,9 @@ public class Ball : MonoBehaviour
     {
         transform.position = resetPosition;
     }
+
+    public void SpeedUpBall(float magnitute)
+    {
+        rig.velocity *= magnitute;
+    }
 }
