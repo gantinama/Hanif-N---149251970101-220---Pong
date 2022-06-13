@@ -7,6 +7,7 @@ public class PowerUpManager : MonoBehaviour
     public Transform spawnArea;
     public int maxPowerUps;
     public int spawnIntervals;
+    // public int timeInterval;
     public Vector2 powerUpAreaMin;
     public Vector2 powerUpAreaMax;
     public List<GameObject> powerUpsTemplate;
@@ -27,9 +28,20 @@ public class PowerUpManager : MonoBehaviour
 
         if (timer > spawnIntervals)
         {
-            GenerateRandomPwrUp();
-            timer -= spawnIntervals;
+            // else
+            // {
+                GenerateRandomPwrUp();
+            //     // timer -= spawnIntervals;
+                Debug.Log("masuk " + timer); 
+            // }
         }
+        if (timer > 5)
+        {
+            RemovePowerUp(gameObject);
+            // timer -= timeInterval;                 
+            Debug.Log("tolak " + powerUps.Count + " " + timer);
+        }
+
     }
 
     public void GenerateRandomPwrUp()
@@ -58,10 +70,12 @@ public class PowerUpManager : MonoBehaviour
         powerUp.SetActive(true);
 
         powerUps.Add(powerUp);
+        timer -= spawnIntervals; 
     }
 
     public void RemovePowerUp(GameObject powerUp)
     {
+        Debug.Log("berhasil " + powerUps.Count + " " + timer);
         powerUps.Remove(powerUp);
         Destroy(powerUp);
     }

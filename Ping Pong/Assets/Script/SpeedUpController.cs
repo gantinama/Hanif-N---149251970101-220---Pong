@@ -7,6 +7,7 @@ public class SpeedUpController : MonoBehaviour
     public PowerUpManager manager;
     public Collider2D ball;
     public float magnitute;
+    // public int timeInterval;
 
     private void OnTriggerEnter2D(Collider2D collition) 
     {

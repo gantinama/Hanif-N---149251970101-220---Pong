@@ -47,7 +47,7 @@ public class PaddleController : MonoBehaviour
     //ove object
     private void MoveObject(Vector2 movement) 
     { 
-        Debug.Log("Paddle Speed: " + movement);
+        // Debug.Log("Paddle Speed: " + movement);
         transform.Translate(movement * Time.deltaTime);
         rig.velocity = movement;
     } 
