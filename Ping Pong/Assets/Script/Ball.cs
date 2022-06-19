@@ -7,6 +7,7 @@ public class Ball : MonoBehaviour
     //manggil kelas vector2
     public Vector2 speed;
     public Vector2 resetPosition;
+    public bool isRight;
 
     //memanggil rigid body
     private Rigidbody2D rig;
@@ -23,10 +24,25 @@ public class Ball : MonoBehaviour
     {
         // Debug.Log("BALL: " + speed);
     }
+    
+    public void OnCollisionEnter2D(Collision2D collision) 
+    {
+        if (collision.gameObject.tag == "Paddle Right")
+        {
+            isRight = true;
+            Debug.Log("KANAN " + isRight);
+        }
+        if (collision.gameObject.tag == "Paddle Left")
+        {
+            isRight = false;
+            Debug.Log("KIRI " + isRight);
+        }
+    }
 
     public void ResetBall()
     {
         transform.position = resetPosition;
+        // rig.velocity = speed;
     }
 
     public void SpeedUpBall(float magnitute)

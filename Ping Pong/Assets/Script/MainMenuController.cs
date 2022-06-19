@@ -16,9 +16,16 @@ public class MainMenuController : MonoBehaviour
         Debug.Log("Created By Hanif Naufalianto-149251970101-220");
     }
 
+    public void Credtis() 
+    { 
+        SceneManager.LoadScene("Credits");
+    } 
+
     public void ExitGame()
     {
         Application.Quit();
         Debug.Log("Keluar");
     }
+
 }
+

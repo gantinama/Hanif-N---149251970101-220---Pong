@@ -30,16 +30,17 @@ public class PowerUpManager : MonoBehaviour
         {
             // else
             // {
-                GenerateRandomPwrUp();
+            GenerateRandomPwrUp();
             //     // timer -= spawnIntervals;
-                Debug.Log("masuk " + timer); 
+                // Debug.Log("masuk " + timer); 
             // }
         }
         if (timer > 5)
         {
-            RemovePowerUp(gameObject);
+            // RemovePowerUp(gameObject);
+            RemoveAllPowerUps();
             // timer -= timeInterval;                 
-            Debug.Log("tolak " + powerUps.Count + " " + timer);
+            // Debug.Log("tolak " + powerUps.Count + " " + timer);
         }
 
     }
@@ -75,7 +76,7 @@ public class PowerUpManager : MonoBehaviour
 
     public void RemovePowerUp(GameObject powerUp)
     {
-        Debug.Log("berhasil " + powerUps.Count + " " + timer);
+        // Debug.Log("berhasil " + powerUps.Count + " " + timer);
         powerUps.Remove(powerUp);
         Destroy(powerUp);
     }
