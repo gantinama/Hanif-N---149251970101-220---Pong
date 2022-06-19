@@ -25,11 +25,11 @@ public class SpeedUpPaddleController : MonoBehaviour
 
         if (collition == ball)
         {
-            if (paddleRight.GetComponent<PaddleController>().isRight == true)
+            if (ball.GetComponent<Ball>().isRight == true)
             {
                 paddleRight.GetComponent<PaddleController>().SpeedUpPaddle(magnitute);
             }
-            if (paddleRight.GetComponent<PaddleController>().isRight == false)
+            if (ball.GetComponent<Ball>().isRight == true)
             {
                 paddleLeft.GetComponent<PaddleController>().SpeedUpPaddle(magnitute);
                 Debug.Log("bisa");

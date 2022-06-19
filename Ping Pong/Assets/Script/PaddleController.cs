@@ -10,7 +10,6 @@ public class PaddleController : MonoBehaviour
     public int speed;
     public KeyCode upKey; 
     public KeyCode downKey;
-    public bool isRight;
     public bool hasLong = false;
     public bool hasSpeed = false;
     private float duration = 5;
@@ -90,7 +89,7 @@ public class PaddleController : MonoBehaviour
         hasLong = true;
         effectMulti = effect;    
             
-        Debug.Log(resize + " " + effect + " " + isRight);
+        Debug.Log(resize + " " + effect);
 
     }
 
